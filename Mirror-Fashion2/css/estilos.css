@@ -17,14 +17,11 @@ header {
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: top right;
-
     font-size: 14px;
     padding-right: 35px;
     text-align: right;
     width: 140px;
-
     padding-top: 8px;
-
     position: absolute;
     top: 0;
     right: 0;
@@ -34,13 +31,21 @@ header {
     font-size: 15px;
 }
 
-.menu-opcoes ul li{
+.menu-opcoes ul li {
     display: inline;
     margin-left: 20px;
 }
 
 .menu-opcoes a {
     color: #036;
+}
+
+.menu-opcoes a:hover {
+    color: #007DC6;
+}
+
+.menu-opcoes a:active {
+    color: #867DC6;
 }
 
 .container {
@@ -53,16 +58,13 @@ header {
     background-color: #DCDCDC;
     font-weight: bold;
     text-transform: uppercase;
-
     margin-right: 10px;
     width: 230px;
-
     float: left;
 }
 
 .menu-departamentos {
     clear: left;
-
     margin-top: 10px;
     padding-bottom: 10px;
 }
@@ -77,6 +79,24 @@ header {
     background-color: white;
     margin-bottom: 1px;
     padding: 5px 10px;
+}
+
+.menu-departamentos li ul {
+    display: none;
+}
+
+.menu-departamentos li:hover ul {
+    display: block;
+}
+
+.menu-departamentos li li a:before {
+    content: "\272A";
+    padding-right: 5px;
+    opacity: 0.4;
+}
+
+.menu-departamentos ul ul li {
+    background-color: #DCDCDC;
 }
 
 .menu-departamentos a {
@@ -102,7 +122,6 @@ header {
     display: inline-block;
     vertical-align: top;
     width: 140px;
-
     margin: 2px;
     padding-bottom: 10px;
 }
@@ -111,7 +130,6 @@ header {
     font-size: 24px;
     font-weight: bold;
     text-transform: uppercase;
-    
     margin-bottom: 10px;
 }
 
@@ -134,9 +152,7 @@ header {
 
 footer {
     background-image: url(../img/fundo-rodape.png);
-
     clear: both;
-
     padding: 20px 0;
 }
 
@@ -154,7 +170,6 @@ footer .container {
     /* tamanho da imagem */
     height: 32px;
     width: 32px;
-
     /* image replacemente */
     display: block;
     text-indent: -9999px;
@@ -182,12 +197,9 @@ footer .container {
     background-image: url(../img/busca.png);
     background-repeat: no-repeat;
     border: none;
-
     /* tamanho da imagem */
     width: 20px;
     height: 20px;
-
     /* image replacement */
     text-indent: -9999px;
 }
-
