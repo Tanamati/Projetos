@@ -18,13 +18,13 @@
     box-sizing: border-box;
     position: absolute;
     top: 30px;
-    border: 6px solid rgba(0,0,0,0);
+    border: 6px solid rgba(0, 0, 0, 0);
     transition: 1s;
     cursor: pointer;
 }
 
 .cores label:hover::after {
-    border: 6px solid rgba(0,0,0,0.1);
+    border: 6px solid rgba(0, 0, 0, 0.1);
 }
 
 .cores label[for="verde"]::after {
@@ -86,13 +86,54 @@
     background: #91BD3C;
     border: none;
     color: #333;
-
     font-size: 1.4em;
     text-transform: uppercase;
-
     box-shadow: 0 1px 3px #777;
-
     display: block;
     padding: 0.5em 1em;
     margin: 1em 0;
+}
+
+@media (min-width: 500px) {
+    .detalhes {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 630px) {
+    .produto {
+        /*a foto vai se posicionar absolutamente co]m relação a esse elemento,
+        por isso preciso estar posicionado*/
+        position: relative;
+        /*deixar 40% de espaço em branco na esquerda para a foto ocupar*/
+        padding-left: 40%;
+        font-size: 1.2em;
+    }
+    .cores {
+        /*estava relative antes; reinicio para static para evitar que a foto se posicione com 
+        relação a mim*/
+        position: static;
+        /*zerando o padding-top que tinha antes e não preciso mais*/
+        padding: 0;
+    }
+    .cores legend {
+        /*estava absolute antes, para ter o mesmo comportamento no Chrome e no Firefox;
+        agora podemos voltar ao fluxo da página*/
+        position: static;
+    }
+    .cores label img {
+        /*imagem se posiciona absolutamente à esquerda com relaçãoao .produto*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        max-width: 35%;
+        max-height: 100%;
+    }
+    .cores label:after {
+        /*as bolinhas coloridas tinham posição absoluta e não precisamos mais,
+        basta flutuar uma do lado da outra*/
+        position: static;
+        float: left;
+        margin-right: 10px;
+    }
 }
